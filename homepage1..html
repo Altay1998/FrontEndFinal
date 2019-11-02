@@ -54,35 +54,6 @@
         <div class="page-Header-Banner">
                  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner ">
-                         <!--   <div class="carousel-first-img carousel-item active carousel">
-                                <div class="overlay-div">
-                                    <div>
-                                        <p class="animated rotateInDownRight delay-1s">Women Collection 2018</p>
-                                        <h3 class="animated lightSpeedIn delay-2s">NEW ARRIVALS</h3>
-                                        <a href="" class="page-button animated zoomIn delay-3s">SHOP NOW</a>
-                                    </div>
-                                </div>
-            
-                            </div>
-                            <div class="carousel-second-img carousel-item carousel">
-                                <div class="overlay-div">
-                                    <div>
-                                        <p class="animated rotateInDownRight delay-1s">Women Collection 2018</p>
-                                        <h3 class="animated lightSpeedIn delay-2s">NEW ARRIVALS</h3>
-                                        <a href="" class="page-button animated fadeInUp delay-3s">SHOP NOW</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-third-img carousel-item carousel">
-                                <div class="overlay-div">
-                                    <div>
-                                        <p class="animated rotateInDownLeft delay-1s">Women Collection 2018</p>
-                                        <h3 class="animated rotateInUpRight delay-2s">NEW ARRIVALS</h3>
-                                        <a href="#" class="page-button animated rotateIn delay-3s">SHOP NOW</a>
-                                    </div>
-                                </div>
-            
-                            </div>-->
                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
@@ -167,69 +138,22 @@
             <div class="row">
                 <h2 class="m-auto">FEATURED PRODUCTS</h2>
             </div>
-            <div class="row mt-5 ">
-                <div class="owl-carousel owl-theme ">
-                    <div class="item page-banner m-auto">
-                        <span class="new-product-ticket">New</span>
-                        <img src="homepageFirst/item-02.jpg" alt="">
-                        <div class="about-products">
-                            <a href="" class="product-link">Herschel supply co 25l</a>
-                            <p>$75.00</p>
-                        </div>
-                        <div class="content-img">
-                            <div class="cover">
-                                <a href="" class="banner-like-ikon animated zoomIn"><i
-                                        class="mdi mdi-heart-outline"></i></a>
-                                <a href="" class="page-button animated fadeInUp">SIGN UP</a>
-                            </div>
-                        </div>
+                <div class="owl-carousel owl-theme row mt-5 ">
+                    <div class="item page-banner page-banner-0 m-auto">
+                        
                     </div>
-                    <div class="item page-banner m-auto">
-                        <img src="homepageFirst/item-03.jpg" alt="">
-                        <div class="about-products">
-                            <a href="" class="product-link">Herschel supply co 25l</a>
-                            <p>$75.00</p>
-                        </div>
-                        <div class="content-img">
-                            <div class="cover">
-                                <a href="" class="banner-like-ikon animated zoomIn"><i
-                                        class="mdi mdi-heart-outline"></i></a>
-                                <a href="" class="page-button animated fadeInUp">SIGN UP</a>
-                            </div>
-                        </div>
+                    <div class="item page-banner page-banner-1 m-auto">
+                        
                     </div>
-                    <div class="item page-banner m-auto">
-                        <img src="homepageFirst/item-05.jpg" alt="">
-                        <div class="about-products">
-                            <a href="" class="product-link">Herschel supply co 25l</a>
-                            <p>$75.00</p>
-                        </div>
-                        <div class="content-img">
-                            <div class="cover">
-                                <a href="" class="banner-like-ikon animated zoomIn"><i
-                                        class="mdi mdi-heart-outline"></i></a>
-                                <a href="" class="page-button animated fadeInUp">SIGN UP</a>
-                            </div>
-                        </div>
+                    <div class="item page-banner page-banner-2 m-auto">
+                        
                     </div>
-                    <div class="item m-auto page-banner">
-                        <img src="homepageFirst/item-07.jpg" alt="">
-                        <span class="sale-product-ticket">Sale</span>
-                        <div class="about-products">
-                            <a href="" class="product-link">Herschel supply co 25l</a>
-                            <p>$75.00</p>
-                        </div>
-                        <div class="content-img">
-                            <div class="cover">
-                                <a href="" class="banner-like-ikon animated zoomIn"><i
-                                        class="mdi mdi-heart-outline"></i></a>
-                                <a href="" class="page-button animated fadeInUp">SIGN UP</a>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="item m-auto page-banner page-banner-3">
+                        
+                    </div> 
 
 
-                </div>
+                
             </div>
         </div>
         <!-- FEATURED PRODUCTS -->
@@ -451,15 +375,17 @@
     <script src="js/pageHeader.js"></script>
     <script src="js/pageFooter.js"></script>
     <script src="js/pageBanner.js"></script>
+    <script src="js/product.js"></script>
     <script>
         $(document).ready(function () {
             let isClickChevronButton = false;
+           
            
             setInterval(()=>{
                 if(parseInt($(window).width())>768){
                 $(".page-main-navigation").addClass('sticky-top')
             }else{
-                $(".page-main-navigation").removeClass('sticky  -top')
+                $(".page-main-navigation").removeClass('sticky-top')
             }
             },1000)
             $('.owl-carousel').owlCarousel({
@@ -478,6 +404,7 @@
                     },
                 }
             })
+           
             var countDownDate = new Date("Jan 1, 2020 15:37:25").getTime();
 
             // Update the count down every 1 second
@@ -503,13 +430,19 @@
                 // If the count down is over, write some text 
 
             }, 1000);
-
-            $(".page-banner").hover(function () {
-                $(this).children('.content-img').children('.cover').fadeToggle();
+            for(let f in product){
+                showProducts(product[f],`page-banner-${f}`);
+            }
+            $(".content-img").hover(function () {
+                $(this).children('.cover').fadeToggle();
+                //her defe hover olanda toogle olur om=nu duzelt
             })
             $(".instagram-img").hover(function () {
                 $(this).children('.content-img').children('.cover').fadeToggle();
             })
+
+           
+
 
             $('.footer-right-side input').focus(function () {
                 let prigressBarWidth = parseInt(getComputedStyle(document.querySelector('.progress')).width)

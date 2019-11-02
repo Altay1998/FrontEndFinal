@@ -175,17 +175,6 @@
 .close-icon {
   display: none;
 }
-// //firsPageImages
-// .carousel-first-img {
-//   @include page-heading-img("/homepageFirst/master-slide-02.jpg", 100% 100%, 500px, 60px, 18px, white);
-// }
-// .carousel-second-img {
-//   @include page-heading-img("/homepageFirst/master-slide-03.jpg", 100% 100%, 500px, 60px, 18px, white);
-// }
-// .carousel-third-img {
-//   @include page-heading-img("/homepageFirst/master-slide-04.jpg", 100% 100%, 500px, 60px, 18px, white);
-// }
-
 .page-button {
   @extend %page-button-style;
 }
@@ -260,8 +249,9 @@
   }
   .content-img {
     @extend %banner-cover-style;
+    
+    height: 87%;
     .cover {
-      height: 87%;
       .banner-like-ikon {
         @include element-position-with-position-absolute(25px, 85%, 2%);
         color: white;
@@ -440,15 +430,6 @@ footer {
     width: 10px;
   }
  }
-// .secondPageCarouselImgFirst {
-//   @include page-heading-img("/homepageSecond/master-slide-02.jpg", 100% 100%, 500px, 80px, 18px, white);
-// }
-// .secondPageCarouselImgSecond {
-//   @include page-heading-img("/homepageSecond/master-slide-06.jpg", 100% 100%, 500px, 80px, 18px, white);
-// }
-// .secondPageCarouselImgThird {
-//   @include page-heading-img("/homepageSecond/master-slide-07.jpg", 100% 100%, 500px, 80px, 18px, white);
-// }
 .product-announcement-video {
   @include page-heading-img("/homepageSecond/bg-video-01.jpg", 100% 100%, 35em, 240%, 200%, white);
   background-attachment: fixed;
@@ -718,6 +699,10 @@ main {
   .dropdown {
     margin: 0;
   }
+}
+
+.new-price{
+  color:$page-buttons-hover-bgcolor;
 }
 //modal dialog boyukolcu 50% kicik olcu 100%
 //carouseller hamisi widtghi ile oynamaq

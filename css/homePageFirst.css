@@ -466,7 +466,7 @@ li {
   background-color: #e65540;
 }
 
-.page-banner .content-img .cover {
+.page-banner .content-img {
   height: 87%;
 }
 
@@ -1087,5 +1087,9 @@ main .scrolling-div table tfoot td {
 
 .payment .dropdown {
   margin: 0;
+}
+
+.new-price {
+  color: #e05f4b;
 }
 /*# sourceMappingURL=homePageFirst.css.map */
