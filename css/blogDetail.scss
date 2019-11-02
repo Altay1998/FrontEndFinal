@@ -1,0 +1,12 @@
+.input-div{
+    input{
+        border-radius: 0x;
+        border: 1px solid $page-paragraf-color;
+    }
+}
+textarea{
+    border: 1px solid $page-paragraf-color;
+    &:hover{
+        border: 1px solid $page-paragraf-color;
+    }
+}

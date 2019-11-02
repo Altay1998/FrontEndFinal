@@ -276,7 +276,6 @@ let product = [
 ]
 
 let showProducts = function (element,appendOn) {
-    console.log(element);
         let tag = element['tag'];
         let tagClassName;
         if (tag != null) {
@@ -290,7 +289,7 @@ let showProducts = function (element,appendOn) {
                             <div class="cover">
                                 <a href="" class="banner-like-ikon animated zoomIn"><i
                                         class="mdi mdi-heart-outline"></i></a>
-                                <a href="" class="page-button animated fadeInUp">SIGN UP</a>
+                                <a href="" class="page-button animated fadeInUp">ADD TO CART</a>
                             </div>
                         </div>
         `);
@@ -306,18 +305,6 @@ let showProducts = function (element,appendOn) {
     
 }
 
-{/* <div class="item page-banner m-auto">
-                        <span class="new-product-ticket">new</span>
-                        <img src="homepageFirst/item-02.jpg" alt="">
-                        <div class="about-products">
-                            <a href="" class="product-link">Herschel supply co 25l</a>
-                            <p>$75.00</p>
-                        </div>
-                        <div class="content-img">
-                            <div class="cover">
-                                <a href="" class="banner-like-ikon animated zoomIn"><i
-                                        class="mdi mdi-heart-outline"></i></a>
-                                <a href="" class="page-button animated fadeInUp">SIGN UP</a>
-                            </div>
-                        </div>
-                    </div> */}
+
+
+

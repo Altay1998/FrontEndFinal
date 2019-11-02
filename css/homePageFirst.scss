@@ -316,6 +316,7 @@
   }
 }
 .page-blog {
+  position: relative;
   .blog-img {
     @include img-hover-scale-effect();
   }
@@ -323,6 +324,14 @@
     @extend %page-link-hover;
     color: black;
     font-size: 16px;
+  }
+  span{
+    position: absolute;
+    background: $page-buttons-bgcolor-black;
+    color: $page-buttons-bgcolor-white;
+    padding: 5px 20px;
+    bottom: 180px;
+    left: 15px;
   }
   p {
     font-size: 13px;
@@ -704,5 +713,37 @@ main {
 .new-price{
   color:$page-buttons-hover-bgcolor;
 }
+
+.added-products-list{
+  display: none;
+  width: 315px;
+  height: 350px;
+  background: $page-buttons-bgcolor-white;
+  right: 10%;
+  top: 15%;
+  position: fixed;
+  z-index: 1100;
+  .page-button{
+    padding: 12px 26px;
+    font-size: 12px;
+  }
+  .products{
+    height: 85%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    .product{
+      @include img-hover-overlay-effect();
+    }
+ 
+  }
+  
+
+}
 //modal dialog boyukolcu 50% kicik olcu 100%
 //carouseller hamisi widtghi ile oynamaq
+#carouselExampleControls{
+  z-index: 1000;
+}
+.read-more-link{
+  @extend %page-link-hover;
+}

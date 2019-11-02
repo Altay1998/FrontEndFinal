@@ -13,7 +13,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/homePageFirst.css">
 </head>
 
@@ -52,20 +51,31 @@
     <main>
         <!-- page carousel -->
         <div class="page-Header-Banner">
-                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner ">
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                    </div> 
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner ">
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
         </div>
         <!-- page carousel -->
+        <div class="added-products-list animated  col-12  col-md-4 border p-2">
+            <div class="products"></div>
+            <div class="row mb-2 mt-2">
+                <div class="col-6  text-center">
+                    <a href="features.html" class="page-button">VIEW CART</a>
+                </div>
+                <div class="col-6 mb-2 text-center">
+                    <a href="" class="page-button">CHECK OUT</a>
+                </div>
+            </div>
+        </div>
 
         <!-- product-collections -->
         <div class="container   mt-5 mb-5">
@@ -138,22 +148,22 @@
             <div class="row">
                 <h2 class="m-auto">FEATURED PRODUCTS</h2>
             </div>
-                <div class="owl-carousel owl-theme row mt-5 ">
-                    <div class="item page-banner page-banner-0 m-auto">
-                        
-                    </div>
-                    <div class="item page-banner page-banner-1 m-auto">
-                        
-                    </div>
-                    <div class="item page-banner page-banner-2 m-auto">
-                        
-                    </div>
-                    <div class="item m-auto page-banner page-banner-3">
-                        
-                    </div> 
+            <div class="owl-carousel owl-theme row mt-5 ">
+                <div class="item page-banner page-banner-0 m-auto">
+
+                </div>
+                <div class="item page-banner page-banner-1 m-auto">
+
+                </div>
+                <div class="item page-banner page-banner-2 m-auto">
+
+                </div>
+                <div class="item m-auto page-banner page-banner-3">
+
+                </div>
 
 
-                
+
             </div>
         </div>
         <!-- FEATURED PRODUCTS -->
@@ -356,7 +366,7 @@
                     </div>
                 </div>
             </div>
-
+            
         </div>
 
         <!-- instagram -->
@@ -372,39 +382,14 @@
 
     <script src="OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
     <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/pageHeader.js"></script>
     <script src="js/pageFooter.js"></script>
     <script src="js/pageBanner.js"></script>
     <script src="js/product.js"></script>
+    <script src="js/allPageSameCode.js"></script>
     <script>
         $(document).ready(function () {
-            let isClickChevronButton = false;
-           
-           
-            setInterval(()=>{
-                if(parseInt($(window).width())>768){
-                $(".page-main-navigation").addClass('sticky-top')
-            }else{
-                $(".page-main-navigation").removeClass('sticky-top')
-            }
-            },1000)
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 2
-                    },
-                    1000: {
-                        items: 4
-                    },
-                }
-            })
-           
             var countDownDate = new Date("Jan 1, 2020 15:37:25").getTime();
 
             // Update the count down every 1 second
@@ -430,73 +415,11 @@
                 // If the count down is over, write some text 
 
             }, 1000);
-            for(let f in product){
-                showProducts(product[f],`page-banner-${f}`);
-            }
-            $(".content-img").hover(function () {
-                $(this).children('.cover').fadeToggle();
-                //her defe hover olanda toogle olur om=nu duzelt
-            })
-            $(".instagram-img").hover(function () {
-                $(this).children('.content-img').children('.cover').fadeToggle();
-            })
-
-           
 
 
-            $('.footer-right-side input').focus(function () {
-                let prigressBarWidth = parseInt(getComputedStyle(document.querySelector('.progress')).width)
-                let interval = setInterval(() => {
-                    let style = parseInt(getComputedStyle(document.querySelector('.progress-bar')).width);
-                    console.log(style);
-                    style += 500;
-                    $('.progress-bar').css('width', `${style}px`);
-                    if (style > prigressBarWidth) {
-                        clearInterval(interval);
-                    }
-                }, 10);
-            })
-            $('.footer-right-side input').blur(function () {
-                let prigressBarWidth = parseInt(getComputedStyle(document.querySelector('.progress')).width)
-                let interval = setInterval(() => {
-                    let style = parseInt(getComputedStyle(document.querySelector('.progress-bar')).width);
-                    console.log(style);
-                    style -= 500;
-                    $('.progress-bar').css('width', `${style}px`);
-                    if (style < 0) {
-                        clearInterval(interval);
-                    }
-                }, 10);
-            })
-            $('.sendiwich-menu').click(function () {
-                $('.dropdown-menu').slideDown();
-                $(this).hide();
-                $('.close-icon').show();
-            })
-            $('.close-icon').click(function () {
-                $('.dropdown-menu').slideUp();
-                $(this).hide();
-                $('.sendiwich-menu').show();
-            })
-            // $('.nav-item').hover(function () {
-            //     $(this).children('.sub-menu').fadeToggle()
-            // })
-
-            $('.dropdown-button').click(function (e) {
-                $('.sub-menu').slideToggle();
-                $(this).css({ 'color': 'white' });
-                if (!isClickChevronButton) {
-                    isClickChevronButton = true
-                    $(this).css({ 'transform': 'rotate(90deg)' });
-                } else {
-                    isClickChevronButton = false;
-                    $(this).css({ 'transform': 'rotate(0deg)' });
-                }
-
-            })
             Banner(banners.homePage1);
         })
-        
+
     </script>
 </body>
 

@@ -120,14 +120,14 @@ li {
   text-decoration: none;
 }
 
-.product-link, .page-main-navigation .main-menu a, .page-banner .product-link, .product-announcement .announcement .content-img .cover .product-link, .page-blog .product-link, footer .footer-main-ul > li .categories-list .product-link {
+.product-link, .page-main-navigation .main-menu a, .page-banner .product-link, .product-announcement .announcement .content-img .cover .product-link, .page-blog .product-link, footer .footer-main-ul > li .categories-list .product-link, .read-more-link {
   font-size: 15px;
   color: #757575;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
 }
 
-.product-link:hover, .page-main-navigation .main-menu a:hover, .product-announcement .announcement .content-img .cover .product-link:hover, footer .footer-main-ul > li .categories-list .product-link:hover {
+.product-link:hover, .page-main-navigation .main-menu a:hover, .product-announcement .announcement .content-img .cover .product-link:hover, footer .footer-main-ul > li .categories-list .product-link:hover, .read-more-link:hover {
   color: #e05f4b;
 }
 
@@ -594,6 +594,10 @@ li {
   color: #fefefe;
 }
 
+.page-blog {
+  position: relative;
+}
+
 .page-blog .blog-img {
   overflow: hidden;
 }
@@ -611,6 +615,15 @@ li {
 .page-blog .product-link {
   color: black;
   font-size: 16px;
+}
+
+.page-blog span {
+  position: absolute;
+  background: #111111;
+  color: #fefefe;
+  padding: 5px 20px;
+  bottom: 180px;
+  left: 15px;
 }
 
 .page-blog p {
@@ -1091,5 +1104,50 @@ main .scrolling-div table tfoot td {
 
 .new-price {
   color: #e05f4b;
+}
+
+.added-products-list {
+  display: none;
+  width: 315px;
+  height: 350px;
+  background: #fefefe;
+  right: 10%;
+  top: 15%;
+  position: fixed;
+  z-index: 1100;
+}
+
+.added-products-list .page-button {
+  padding: 12px 26px;
+  font-size: 12px;
+}
+
+.added-products-list .products {
+  height: 85%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.added-products-list .products .product {
+  position: relative;
+}
+
+.added-products-list .products .product .content-img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.added-products-list .products .product .content-img .cover {
+  width: 100%;
+  height: 100%;
+}
+
+#carouselExampleControls {
+  z-index: 1000;
 }
 /*# sourceMappingURL=homePageFirst.css.map */

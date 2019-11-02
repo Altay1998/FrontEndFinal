@@ -1,0 +1,14 @@
+@import "allPageSameDesign";
+.page-Header-Banner{
+    p,h3{
+        color:$page-buttons-bgcolor-black !important;
+    }
+    h3{
+        font-size: 50px;
+        text-decoration: underline;
+    }
+}
+.product-announcement{
+    background: url('/heading images/bg-banner-02.jpg') no-repeat center;
+    background-size: 120% 100%;
+}
