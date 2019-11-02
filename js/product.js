@@ -2,7 +2,7 @@ let product = [
     {
         name: 'Herschel supply co 25l',
         'old price': null,
-        'new price': '75.00',
+        'new price': '75,00',
         img: 'productsImg/item-02.jpg',
         tag: 'new',
         liked: false,
@@ -12,7 +12,7 @@ let product = [
     {
         name: 'Denim jacket blue',
         'old price': null,
-        'new price': '92.00',
+        'new price': '92,00',
         img: 'productsImg/item-03.jpg',
         tag: "sale",
         liked: false,
@@ -22,7 +22,7 @@ let product = [
     {
         name: 'Coach slim easton black',
         'old price': null,
-        'new price': '165.00',
+        'new price': '165,00',
         img: 'productsImg/item-05.jpg',
         tag: "sale",
         liked: false,
@@ -32,7 +32,7 @@ let product = [
     {
         name: 'Frayed denim shorts',
         'old price': '29.50',
-        'new price': '165.00',
+        'new price': '165,00',
         img: 'productsImg/item-07.jpg',
         tag: null,
         liked: false,
@@ -42,7 +42,7 @@ let product = [
     {
         name: 'Herschel supply co 25l',
         'old price': 'new',
-        'new price': '75.00',
+        'new price': '75,00',
         img: 'productsImg/item-01.jpg',
         tag: 'new',
         liked: false,
@@ -52,7 +52,7 @@ let product = [
     {
         name: 'Denim jacket blue',
         'old price': null,
-        'new price': '75.00',
+        'new price': '75,00',
         img: 'productsImg/item-14.jpg',
         tag: 'new',
         liked: false,
@@ -62,7 +62,7 @@ let product = [
     {
         name: 'Herschel supply co 25l',
         'old price': 'new',
-        'new price': '75.00',
+        'new price': '75,00',
         img: 'productsImg/item-06.jpg',
         tag: 'new',
         liked: false,
@@ -72,7 +72,7 @@ let product = [
     {
         name: 'Denim jacket blue',
         'old price': 'new',
-        'new price': '75.00',
+        'new price': '75,00',
         img: 'productsImg/item-08.jpg',
         tag: 'new',
         liked: false,
@@ -82,7 +82,7 @@ let product = [
     {
         name: 'Coach slim easton black',
         'old price': 'new',
-        'new price': '165.00',
+        'new price': '165,00',
         img: 'productsImg/item-08.jpg',
         tag: 'new',
         liked: false,
@@ -92,7 +92,7 @@ let product = [
     {
         name: 'Herschel supply co 25l',
         'old price': null,
-        'new price': '75.00',
+        'new price': '75,00',
         img: 'productsImg/item-02.jpg',
         tag: 'new',
         liked: false,
@@ -102,7 +102,7 @@ let product = [
     {
         name: 'Denim jacket blue',
         'old price': null,
-        'new price': '92.00',
+        'new price': '92,00',
         img: 'productsImg/item-03.jpg',
         tag: "sale",
         liked: false,
@@ -112,7 +112,7 @@ let product = [
     {
         name: 'Coach slim easton black',
         'old price': null,
-        'new price': '165.00',
+        'new price': '165,00',
         img: 'productsImg/item-05.jpg',
         tag: "sale",
         liked: false,
@@ -122,7 +122,7 @@ let product = [
     {
         name: 'Frayed denim shorts',
         'old price': '29.50',
-        'new price': '165.00',
+        'new price': '165,00',
         img: 'productsImg/item-07.jpg',
         tag: null,
         liked: false,
@@ -132,7 +132,7 @@ let product = [
     {
         name: 'Herschel supply co 25l',
         'old price': 'new',
-        'new price': '75.00',
+        'new price': '75,00',
         img: 'productsImg/item-01.jpg',
         tag: 'new',
         liked: false,
@@ -142,7 +142,7 @@ let product = [
     {
         name: 'Denim jacket blue',
         'old price': null,
-        'new price': '75.00',
+        'new price': '75,00',
         img: 'productsImg/item-14.jpg',
         tag: 'new',
         liked: false,
@@ -152,7 +152,7 @@ let product = [
     {
         name: 'Herschel supply co 25l',
         'old price': 'new',
-        'new price': '75.00',
+        'new price': '75,00',
         img: 'productsImg/item-06.jpg',
         tag: 'new',
         liked: false,
@@ -162,7 +162,7 @@ let product = [
     {
         name: 'Denim jacket blue',
         'old price': 'new',
-        'new price': '75.00',
+        'new price': '75,00',
         img: 'productsImg/item-08.jpg',
         tag: 'new',
         liked: false,
@@ -172,7 +172,7 @@ let product = [
     {
         name: 'Coach slim easton black',
         'old price': 'new',
-        'new price': '165.00',
+        'new price': '165,00',
         img: 'productsImg/item-08.jpg',
         tag: 'new',
         liked: false,
@@ -182,7 +182,7 @@ let product = [
     {
         name: 'Herschel supply co 25l',
         'old price': null,
-        'new price': '75.00',
+        'new price': '75,00',
         img: 'productsImg/item-02.jpg',
         tag: 'new',
         liked: false,
@@ -192,7 +192,7 @@ let product = [
     {
         name: 'Denim jacket blue',
         'old price': null,
-        'new price': '92.00',
+        'new price': '92,00',
         img: 'productsImg/item-03.jpg',
         tag: "sale",
         liked: false,
@@ -202,7 +202,7 @@ let product = [
     {
         name: 'Coach slim easton black',
         'old price': null,
-        'new price': '165.00',
+        'new price': '165,00',
         img: 'productsImg/item-05.jpg',
         tag: "sale",
         liked: false,
@@ -212,7 +212,7 @@ let product = [
     {
         name: 'Frayed denim shorts',
         'old price': '29.50',
-        'new price': '165.00',
+        'new price': '165,00',
         img: 'productsImg/item-07.jpg',
         tag: null,
         liked: false,
@@ -222,7 +222,7 @@ let product = [
     {
         name: 'Herschel supply co 25l',
         'old price': 'new',
-        'new price': '75.00',
+        'new price': '75,00',
         img: 'productsImg/item-01.jpg',
         tag: 'new',
         liked: false,
@@ -232,7 +232,7 @@ let product = [
     {
         name: 'Denim jacket blue',
         'old price': null,
-        'new price': '75.00',
+        'new price': '75,00',
         img: 'productsImg/item-14.jpg',
         tag: 'new',
         liked: false,
@@ -242,7 +242,7 @@ let product = [
     {
         name: 'Herschel supply co 25l',
         'old price': null,
-        'new price': '75.00',
+        'new price': '75,00',
         img: 'productsImg/item-06.jpg',
         tag: 'new',
         liked: false,
@@ -252,7 +252,7 @@ let product = [
     {
         name: 'Denim jacket blue',
         'old price': null,
-        'new price': '75.00',
+        'new price': '75,00',
         img: 'productsImg/item-08.jpg',
         tag: 'new',
         liked: false,
@@ -262,7 +262,7 @@ let product = [
     {
         name: 'Coach slim easton black',
         'old price': null,
-        'new price': '165.00',
+        'new price': '165,00',
         img: 'productsImg/item-08.jpg',
         tag: 'new',
         liked: false,

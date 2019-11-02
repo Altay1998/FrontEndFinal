@@ -291,7 +291,11 @@
                 }
 
             })
-
+            $('#flat-slider').slider({
+                orientation: 'horizontal',
+                range: true,
+                values: [17, 67]
+            });
             //ancaq bu sehife ucun
             let contentImg = $('.content-img');
             for (let f of contentImg) {
@@ -308,28 +312,32 @@
                     console.log(f);
                     e.preventDefault();
                     let query;
-                        query = JSON.stringify(product[f]);
-                        if (sessionStorage[f] == undefined && sessionStorage[f] == null) {
-                            sessionStorage.setItem(f, query);
-                            swal({
-                                title: product[f]['name'],
-                                text: "is added to cart !",
-                                icon: "success",
-                                button: "OK",
-                            });
-                        }
-                    else{
-                            swal({
-                                title: "This item already  has been existed",
-                                icon: "warning",
-                                button: "OK",
-                            });
-                        }
+                    query = JSON.stringify(product[f]);
+                    if (sessionStorage[f] == undefined && sessionStorage[f] == null) {
+                        sessionStorage.setItem(f, query);
+                        swal({
+                            title: product[f]['name'],
+                            text: "is added to cart !",
+                            icon: "success",
+                            button: "OK",
+                        });
+                    }
+                    else {
+                        swal({
+                            title: "This item already  has been existed",
+                            icon: "warning",
+                            button: "OK",
+                        });
+                    }
 
 
 
                 })
             };
+
+
+
+
         })
     </script>
 </body>

@@ -128,20 +128,20 @@
         <div class="row mb-5">
             <div class="col-md-5  col-lg-7  d-none d-md-block"></div>
             <div class="col-12 col-md-7 col-lg-5 p-3 border border-muted payment">
-                <div class="row">
+                <div class="row ">
                     <div class="col-12">
                         <h2>CART TOTALS</h2>
                     </div>
                     <div class="col-4 border-class">
                         <h2>Subtotal:</h2>
                     </div>
-                    <div class="col-8 border-class">$39.00</div>
+                    <div class="col-8 border-class subtotal"><p>39.00</p></div>
                     <div class="col-4">
                         <h2>Shipping:</h2>
                     </div>
-                    <div class="col-8">
-                        There are no shipping methods available. Please double check your address, or contact us if you
-                        need any help.
+                    <div class="col-8 pl-3">
+                       <p> There are no shipping methods available. Please double check your address, or contact us if you
+                            need any help.</p>
                     </div>
                     <div class="col-4"></div>
                     <div class="col-8">
@@ -149,13 +149,13 @@
                     </div>
                     <div class="col-4"></div>
                     <div class="col-8">
-                        <div class="dropdown  col-12 col-md-6 p-2">
+                        <div class="dropdown  col-12 col-md-6 p-1">
                             <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Defautl Sorting
+                                Default Sorting
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#"> Defautl Sorting</a>
+                                <a class="dropdown-item" href="#"> Default Sorting</a>
                                 <a class="dropdown-item" href="#">Popularity</a>
                                 <a class="dropdown-item" href="#">Price: low to high</a>
                                 <a class="dropdown-item" href="#">Price: high to low</a>
@@ -164,11 +164,11 @@
                     </div>
                     <div class="col-4"></div>
                     <div class="col-8">
-                        <input type="text" class="search-input ">
+                        <input type="text" class="search-input " placeholder="State/ country">
                     </div>
                     <div class="col-4"></div>
                     <div class="col-8">
-                        <input type="text" class="search-input ">
+                        <input type="text" class="search-input " placeholder="Postcode / Zip" >
                     </div>
                     <div class="col-4 border-class"></div>
                     <div class="col-8 border-class">
@@ -178,7 +178,7 @@
                     <div class="col-4">
                         <h2>Total:</h2>
                     </div>
-                    <div class="col-8">$39.00</div>
+                    <div class="col-8"><p>39.00</p></div>
                     <div class="col-2"></div>
                     <div class="col-12 col-md-10">
                         <a href="" class="page-button m-auto ">PRODUCED TO CHECKOUT</a>
@@ -204,6 +204,7 @@
     <script src="js/pageHeader.js"></script>
     <script src="js/pageFooter.js"></script>
     <script src="js/pageBanner.js"></script>
+    <script src="js/product.js"></script>
     <script>
         $(document).ready(function () {
 
@@ -290,6 +291,70 @@
 
             })
             Banner(banners.features);
+
+            $('tbody').html('');
+            for (let f in product) {
+                if (localStorage[f] != undefined && localStorage[f] != null) {
+                    let element = JSON.parse(localStorage[f])
+
+                    $('tbody').append(`<tr>
+                                <td class="product-img">
+                                    <div class="p-4 d-flex justify-content-center align-items-center">
+                                        <div class="item m-auto" style="width: 70%;position: relative;">
+                                            <img src="${element["img"]}" alt="">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Men Tshirt</td>
+                                <td class="priduct-price">$${element['new price']}</td>
+                                <td>
+                                    <div class="row product-count">
+                                        <div><button id='minus${f}'>-</button></div>
+                                        <div><input id="input${f}" type="text" value="1" class="text-center"></div>
+                                        <div><button id='pilus${f}''>+</button></div>
+                                    </div>
+                                </td>
+                                <td id="result${f}" class="result">${element['new price']}$</td>
+                            </tr>`);
+                    // 
+                    // 
+
+                    $(`#minus${f}`).click(function () {
+                        let count = parseInt($(`#input${f}`).val());
+                        if (count > 1) {
+                            count--;
+                            let total = count * parseFloat(element['new price']);
+                            $(`#input${f}`).val(count);
+                            $(`#result${f}`).text(total);
+                            let elements = $('.result');
+                            let result = 0;
+                            for (let f of elements) {
+                                result += parseFloat($(f).html());
+                                console.log(result);
+                            }
+                            $('.subtotal').text(result);
+                        }
+                    })
+                    $(`#pilus${f}`).click(function () {
+                        let count = parseInt($(`#input${f}`).val());
+                        count++;
+                        console.log(parseFloat(element['new price']));
+                        let total = count * parseFloat(element['new price']);
+                        $(`#input${f}`).val(count);
+                        $(`#result${f}`).text( total);
+                        let elements = $('.result');
+                        let result = 0;
+                        for (let f of elements) {
+                            result += parseFloat($(f).html());
+                            console.log(result);
+                        }
+                        $('.subtotal').text(result);
+                    })
+
+                }
+            }
+
+
         })
 
     </script>

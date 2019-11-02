@@ -739,11 +739,20 @@ main {
   
 
 }
-//modal dialog boyukolcu 50% kicik olcu 100%
-//carouseller hamisi widtghi ile oynamaq
+
 #carouselExampleControls{
   z-index: 1000;
 }
 .read-more-link{
   @extend %page-link-hover;
 }
+
+//modal dialog boyukolcu 50% kicik olcu 100%
+//carouseller hamisi widtghi ile oynamaq
+//features x ve diger elementlerde overlay yaratmmaq
+//sagda asagda cixan yuxari kecmek ucun sey
+// sehifeleri baglamaq
+// refakting
+//about contakt
+//home page carousel 2,3
+//vaxt qalsa pagination
