@@ -1053,6 +1053,7 @@ footer .progress .progress-bar {
 main .scrolling-div {
   margin-top: 50px;
   margin-bottom: 50px;
+  overflow-x: scroll;
 }
 
 main .scrolling-div table {
