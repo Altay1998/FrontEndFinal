@@ -289,19 +289,18 @@
             </div>
             <div class="col-12 mt-3">
                 <div class="tab-content " id="myTabContent">
-                    <div class="tab-pane fade show active row d-flex" id="home" role="tabpanel" aria-labelledby="home-tab">
-
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="d-flex flex-wrap products-list"></div>
                     </div>
-                    <div class="tab-pane fade row d-flex" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-
+                    <div class="tab-pane fade " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="d-flex flex-wrap products-list"></div>
                     </div>
-                    <div class="tab-pane fade row d-flex" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="d-flex flex-wrap products-list"></div>
                     </div>
-                    <div class="tab-pane fade row d-flex" id="contact2" role="tabpanel" aria-labelledby="contact2-tab">
-
+                    <div class="tab-pane fade " id="contact2" role="tabpanel" aria-labelledby="contact2-tab">
+                        <div class="d-flex flex-wrap products-list"></div>
                     </div>
-
 
                 </div>
 
@@ -590,33 +589,28 @@
                 }
 
             })
-           let tabContents= $('.tab-content').children();
-           let navLink=$('a[data-toggle="tab"]');
            
-            for(let f in tabContents){
-                let category = $(navLink[f]).html();
-            let choosenId = $(navLink[f]).attr('id');
-           if(choosenId!=undefined){
-            $(`div[aria-labelledby='${choosenId}`).html('')
-            console.log( category);
-            for (let f in product) {
-                for (let ff in product[f]['category']) {
-                    console.log( product[f]["category"][ff] == category);
-                    if (product[f]["category"][ff] == category) {
-                        $(`div[aria-labelledby='${choosenId}`).append(`
-                           <div class="item m-auto page-banner page-banner-${f}" style="width:250px;position: relative;">
-                                
-                            </div> 
-                           `)
-                        showProducts(product[f], `div[aria-labelledby='${choosenId}']>.page-banner-${f}`);
-                    }
-                }
+           
+            let navLink = $('a[data-toggle="tab"]');
 
+            for (let ft of navLink) {
+                let category = $(ft).html();
+                let choosenId = $(ft).attr('id');
+                    for (let f in product) {
+                        for (let ff in product[f]['category']) {
+                            if (product[f]["category"][ff] == category) {
+                                $(`div[aria-labelledby="${choosenId}"] .products-list`).append(`<div class="item m-auto page-banner page-banner-${f}" style="width:250px;"></div>`)
+                                showProducts(product[f], `div[aria-labelledby="${choosenId}"] .page-banner-${f}`);
+                
+                            }
+                           
+                        }
+
+                    
+                
+                }
             }
-            
-           }
-            }
-            
+
 
         })
     </script>

@@ -329,38 +329,20 @@
                         </div>
                         <div class="col-12 mt-3">
                             <div class="tab-content " id="myTabContent">
-                                <div class="tab-pane fade show active " id="home" role="tabpanel"
-                                    aria-labelledby="home-tab">
-                                    <div class="row d-flex">
-                                        <div class="item m-auto page-banner" style="width:250px;position: relative;">
-                                            <span class="new-product-ticket">New</span>
-                                            <img src="homePageSecond/item-02.jpg" alt="">
-                                            <div class="about-products">
-                                                <a href="" class="product-link">Herschel supply co 25l</a>
-                                                <p>$75.00</p>
-                                            </div>
-                                            <div class="content-img">
-                                                <div class="cover" style="height: 83%;">
-                                                    <a href="" class="banner-like-ikon animated zoomIn"><i
-                                                            class="mdi mdi-heart-outline"></i></a>
-                                                    <a href="" class="page-button animated fadeInUp">SIGN UP</a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="tab-content " id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="d-flex flex-wrap products-list"></div>
                                     </div>
-                                    <div class="tab-pane fade" id="profile" role="tabpanel"
-                                        aria-labelledby="profile-tab">
-
+                                    <div class="tab-pane fade " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="d-flex flex-wrap products-list"></div>
                                     </div>
-                                    <div class="tab-pane fade" id="contact" role="tabpanel"
-                                        aria-labelledby="contact-tab">
-
+                                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                        <div class="d-flex flex-wrap products-list"></div>
                                     </div>
-                                    <div class="tab-pane fade" id="contact" role="tabpanel"
-                                        aria-labelledby="contact-tab">
-
+                                    <div class="tab-pane fade " id="contact2" role="tabpanel" aria-labelledby="contact2-tab">
+                                        <div class="d-flex flex-wrap products-list"></div>
                                     </div>
-
+                
                                 </div>
                             </div>
 
@@ -582,6 +564,25 @@
                 // If the count down is over, write some text 
 
             }, 1000);
+            let navLink = $('a[data-toggle="tab"]');
+
+for (let ft of navLink) {
+    let category = $(ft).html();
+    let choosenId = $(ft).attr('id');
+        for (let f in product) {
+            for (let ff in product[f]['category']) {
+                if (product[f]["category"][ff] == category) {
+                    $(`div[aria-labelledby="${choosenId}"] .products-list`).append(`<div class="item m-auto page-banner page-banner-${f}" style="width:250px;"></div>`)
+                    showProducts(product[f], `div[aria-labelledby="${choosenId}"] .page-banner-${f}`);
+    
+                }
+               
+            }
+
+        
+    
+    }
+}
 
 
             Banner(banners.homePage3);
