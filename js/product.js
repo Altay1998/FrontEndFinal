@@ -17,7 +17,7 @@ let product = [
         tag: "sale",
         liked: false,
         'added to card': false,
-        category: ['sale', 'Featured'],
+        category: ['Sale', 'Featured'],
     },
     {
         name: 'Coach slim easton black',
@@ -27,7 +27,7 @@ let product = [
         tag: "sale",
         liked: false,
         'added to card': false,
-        category: ['sale', 'Top Rate'],
+        category: ['Sale', 'Top Rate'],
     },
     {
         name: 'Frayed denim shorts',
@@ -67,7 +67,7 @@ let product = [
         tag: 'new',
         liked: false,
         'added to card': false,
-        category: ['Best Seller', 'sale'],
+        category: ['Best Seller', 'Sale'],
     },
     {
         name: 'Denim jacket blue',
@@ -77,7 +77,7 @@ let product = [
         tag: 'new',
         liked: false,
         'added to card': false,
-        category: ['sale', 'Top Rate'],
+        category: ['Sale', 'Top Rate'],
     },
     {
         name: 'Coach slim easton black',
@@ -107,7 +107,7 @@ let product = [
         tag: "sale",
         liked: false,
         'added to card': false,
-        category: ['sale', 'Featured'],
+        category: ['Sale', 'Featured'],
     },
     {
         name: 'Coach slim easton black',
@@ -117,7 +117,7 @@ let product = [
         tag: "sale",
         liked: false,
         'added to card': false,
-        category: ['sale', 'Top Rate'],
+        category: ['Sale', 'Top Rate'],
     },
     {
         name: 'Frayed denim shorts',
@@ -157,7 +157,7 @@ let product = [
         tag: 'new',
         liked: false,
         'added to card': false,
-        category: ['Best Seller', 'sale'],
+        category: ['Best Seller', 'Sale'],
     },
     {
         name: 'Denim jacket blue',
@@ -167,7 +167,7 @@ let product = [
         tag: 'new',
         liked: false,
         'added to card': false,
-        category: ['sale', 'Top Rate'],
+        category: ['Sale', 'Top Rate'],
     },
     {
         name: 'Coach slim easton black',
@@ -197,7 +197,7 @@ let product = [
         tag: "sale",
         liked: false,
         'added to card': false,
-        category: ['sale', 'Featured'],
+        category: ['Sale', 'Featured'],
     },
     {
         name: 'Coach slim easton black',
@@ -207,7 +207,7 @@ let product = [
         tag: "sale",
         liked: false,
         'added to card': false,
-        category: ['sale', 'Top Rate'],
+        category: ['Sale', 'Top Rate'],
     },
     {
         name: 'Frayed denim shorts',
@@ -247,7 +247,7 @@ let product = [
         tag: 'new',
         liked: false,
         'added to card': false,
-        category: ['Best Seller', 'sale'],
+        category: ['Best Seller', 'Sale'],
     },
     {
         name: 'Denim jacket blue',
@@ -257,7 +257,7 @@ let product = [
         tag: 'new',
         liked: false,
         'added to card': false,
-        category: ['sale', 'Top Rate'],
+        category: ['Sale', 'Top Rate'],
     },
     {
         name: 'Coach slim easton black',
@@ -274,35 +274,34 @@ let product = [
 
 
 ]
-
 let showProducts = function (element,appendOn) {
-        let tag = element['tag'];
-        let tagClassName;
-        if (tag != null) {
-            tagClassName = `${tag}-product-ticket`;
-            tag = tag[0].toUpperCase() + tag.slice(1);
-            $(`.${appendOn}`).append(`<span class="${tagClassName}">${tag}</span>`);
-        }
-        $(`.${appendOn}`).append(` <img src=${element['img']} alt="">
-        <div class="about-products"></div>
-        <div class="content-img ">
-                            <div class="cover">
-                                <a href="" class="banner-like-ikon animated zoomIn"><i
-                                        class="mdi mdi-heart-outline"></i></a>
-                                <a href="" class="page-button add-to-cart animated fadeInUp">ADD TO CART</a>
-                            </div>
+    let tag = element['tag'];
+    let tagClassName;
+    if (tag != null) {
+        tagClassName = `${tag}-product-ticket`;
+        tag = tag[0].toUpperCase() + tag.slice(1);
+        $(`${appendOn}`).append(`<span class="${tagClassName}">${tag}</span>`);
+    }
+    $(`${appendOn}`).append(` <img src=${element['img']} alt="">
+    <div class="about-products"></div>
+    <div class="content-img ">
+                        <div class="cover">
+                            <a href="" class="banner-like-ikon animated zoomIn"><i
+                                    class="mdi mdi-heart-outline"></i></a>
+                            <a href="" class="page-button add-to-cart animated fadeInUp">ADD TO CART</a>
                         </div>
-        `);
-        $(`.${appendOn} .about-products`).append(`<a href="" class="product-link">${element["name"]}</a>`);
-        if (element['old price'] != null) {
-            $(`.${appendOn} .about-products`).append(`<p><del>$${element['old price']}</del><span class="new-price">  $${element['new price']}</span></p>`);
-        }
-        else {
-            $(`.${appendOn} .about-products`).append(`<p>$${element['new price']}</p>`);
+                    </div>
+    `);
+    $(`${appendOn} .about-products`).append(`<a href="" class="product-link">${element["name"]}</a>`);
+    if (element['old price'] != null) {
+        $(`${appendOn} .about-products`).append(`<p><del>$${element['old price']}</del><span class="new-price">  $${element['new price']}</span></p>`);
+    }
+    else {
+        $(`${appendOn} .about-products`).append(`<p>$${element['new price']}</p>`);
 
-        }
-        
+    }
     
+
 }
 
 

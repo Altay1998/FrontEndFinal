@@ -188,24 +188,33 @@
                 </div>
             </div>`);
             }
-        }
+        }   
+        let count=0;
         $(".all-blogs").html('');
         for(let f in blogs){
+            count++;
             $(".all-blogs").append(`
             <div class=" col-11 page-blog" style="width: 18rem;">
                             <div class="blog-img">
                                 <img src="${blogs[f]["img"]}" class="card-img-top" alt="...">
-                                <span>29 DEC,2018</span>
+                                <span>${blogs[f]["date"]}</span>
                             </div>
                             <div class="about-banner">
-                                <a href="" class="product-link">Black Friday Guide: Best Sales & Discount Codes</a>
+                                <a href="" class="product-link">${blogs[f]["name"]}</a>
                                 <p>By Nancy Ward on July 22, 2017</p>
-                                <p>Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis
-                                    augue id euismod. Inter-dum et malesuada fames</p>
-                                <a href="" class="read-more-link">Continue Reading <i class="mdi mdi-right"></i></a>
+                                <p>${blogs[f]["text"].substring(0,200)}</p>
+                                <a href="blog-detail.html" class="read-more-link">Continue Reading <i class="mdi mdi-arrow-right-thick"></i></a>
                             </div>
-                        </div>`)
+                        </div>`);
+                        if(count==3){
+                            break;
+                        }
+                        $('.read-more-link').click(()=>{
+                            let choosenBlog=JSON.stringify(blogs[f]);
+                            sessionStorage.setItem(`choosenBlog`,choosenBlog);
+        })
         }
+        
             Banner(banners.blog);
         })
 

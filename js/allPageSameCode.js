@@ -1,4 +1,4 @@
-$(document).ready(function () {
+
     let isClickChevronButton = false;
     setInterval(() => {
         if (parseInt($(window).width()) > 768) {
@@ -96,9 +96,6 @@ $(document).ready(function () {
         $(this).hide();
         $('.sendiwich-menu').show();
     })
-    // $('.nav-item').hover(function () {
-    //     $(this).children('.sub-menu').fadeToggle()
-    // })
 
     $('.dropdown-button').click(function (e) {
         $('.sub-menu').slideToggle();
@@ -113,7 +110,7 @@ $(document).ready(function () {
 
     })
     for (let f in product) {
-        showProducts(product[f], `page-banner-${f}`);
+        showProducts(product[f], `.page-banner-${f}`);
         $(`.page-banner-${f} .content-img`).hover(function () {
             $(this).children('.cover').fadeToggle();
             //her defe hover olanda toogle olur om=nu duzelt
@@ -129,7 +126,7 @@ $(document).ready(function () {
     let pageButton = $('.add-to-cart');
     
     for (let f in pageButton) {
-        
+        console.log(pageButton[f])
         $(pageButton[f]).click((e) => {
             e.preventDefault();
             let query;
@@ -177,5 +174,6 @@ $(document).ready(function () {
         })
     };
 
+  
 
-})
+

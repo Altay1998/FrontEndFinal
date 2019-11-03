@@ -280,8 +280,22 @@
                 }
             }
 
+            let choosenBlog=JSON.parse(sessionStorage[`choosenBlog`]);
+            $('.page-blog').html('');
+            $(".page-blog").append(`
+            <img src="${choosenBlog['img']}" class="card-img-top" alt="...">
+
+<div class="about-banner">
+    <a href="" class="product-link">${choosenBlog['name']}</a>
+    <p>By ${choosenBlog['by']}</p>
+    <p>${choosenBlog['text']}</p>
+</div>
+
+            `)
+
             Banner(banners.blog);
         })
+
 
     </script>
 </body>
