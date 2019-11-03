@@ -159,6 +159,7 @@ li {
 }
 
 .dropdown-menu {
+  position: relative;
   display: none;
   width: 100%;
 }
@@ -1016,6 +1017,39 @@ footer .progress .progress-bar {
   text-decoration: underline;
 }
 
+.product-count {
+  height: 50px;
+}
+
+.product-count div {
+  height: 100%;
+  padding: 0;
+}
+
+.product-count button {
+  outline: none;
+  border: 2px solid #e2e2e2;
+  background: #e2e2e2;
+  height: 100%;
+  padding: 0;
+  width: 50px;
+  font-weight: bold;
+  color: #505050;
+  font-size: 20px;
+}
+
+.product-count button:active {
+  background: #e65540;
+  color: white;
+}
+
+.product-count input {
+  border: 2px solid #e2e2e2;
+  height: 50px;
+  padding: 0;
+  width: 50px;
+}
+
 main .scrolling-div {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -1041,39 +1075,6 @@ main .scrolling-div table tbody {
 
 main .scrolling-div table tbody td img {
   width: 100%;
-}
-
-main .scrolling-div table tbody td .product-count {
-  height: 50px;
-}
-
-main .scrolling-div table tbody td .product-count div {
-  height: 100%;
-  padding: 0;
-}
-
-main .scrolling-div table tbody td .product-count button {
-  outline: none;
-  border: 2px solid #e2e2e2;
-  background: #e2e2e2;
-  height: 100%;
-  padding: 0;
-  width: 50px;
-  font-weight: bold;
-  color: #505050;
-  font-size: 20px;
-}
-
-main .scrolling-div table tbody td .product-count button:active {
-  background: #e65540;
-  color: white;
-}
-
-main .scrolling-div table tbody td .product-count input {
-  border: 2px solid #e2e2e2;
-  height: 50px;
-  padding: 0;
-  width: 50px;
 }
 
 main .scrolling-div table tfoot td {

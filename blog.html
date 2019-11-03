@@ -54,20 +54,8 @@
         <div class="container mt-5">
             <div class="row">
                 <section class="col-12 col-md-9">
-                    <div class="row">
-                        <div class=" col-11 page-blog" style="width: 18rem;">
-                            <div class="blog-img">
-                                <img src="homepageFirst/blog-01.jpg" class="card-img-top" alt="...">
-                                <span>29 DEC,2018</span>
-                            </div>
-                            <div class="about-banner">
-                                <a href="" class="product-link">Black Friday Guide: Best Sales & Discount Codes</a>
-                                <p>By Nancy Ward on July 22, 2017</p>
-                                <p>Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis
-                                    augue id euismod. Inter-dum et malesuada fames</p>
-                                <a href="" class="read-more-link">Continue Reading <i class="mdi mdi-right"></i></a>
-                            </div>
-                        </div>
+                    <div class="row all-blogs">
+                        
                     </div>
                 </section>
                 <aside class="col-12 col-md-3 ">
@@ -181,6 +169,7 @@
     <script src="js/pageFooter.js"></script>
     <script src="js/pageBanner.js"></script>
     <script src="js/product.js"></script>
+    <script src="js/blogs.js"></script>
     <script>
         $(document).ready(function () {
 
@@ -200,7 +189,23 @@
             </div>`);
             }
         }
-
+        $(".all-blogs").html('');
+        for(let f in blogs){
+            $(".all-blogs").append(`
+            <div class=" col-11 page-blog" style="width: 18rem;">
+                            <div class="blog-img">
+                                <img src="${blogs[f]["img"]}" class="card-img-top" alt="...">
+                                <span>29 DEC,2018</span>
+                            </div>
+                            <div class="about-banner">
+                                <a href="" class="product-link">Black Friday Guide: Best Sales & Discount Codes</a>
+                                <p>By Nancy Ward on July 22, 2017</p>
+                                <p>Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis
+                                    augue id euismod. Inter-dum et malesuada fames</p>
+                                <a href="" class="read-more-link">Continue Reading <i class="mdi mdi-right"></i></a>
+                            </div>
+                        </div>`)
+        }
             Banner(banners.blog);
         })
 

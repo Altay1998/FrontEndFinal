@@ -92,6 +92,7 @@
   @include page-navigation();
 }
 .dropdown-menu {
+  position: relative;
   display: none;
   width: 100%;
   .menu-navigation {
@@ -630,6 +631,34 @@ footer {
     }
   }
 }
+.product-count {
+  height: 50px;
+  div {
+    height: 100%;
+    padding: 0;
+  }
+  button {
+    outline: none;
+    border: 2px solid #e2e2e2;
+    background: #e2e2e2;
+    height: 100%;
+    padding: 0;
+    width: 50px;
+    font-weight: bold;
+    color: #505050;
+    font-size: 20px;
+    &:active {
+      background: #e65540;
+      color: white;
+    }
+  }
+  input {
+    border: 2px solid #e2e2e2;
+    height: 50px;
+    padding: 0;
+    width: 50px;
+  }
+}
 main {
   .scrolling-div {
     margin-top: 50px;
@@ -652,34 +681,7 @@ main {
           img {
             width: 100%;
           }
-          .product-count {
-            height: 50px;
-            div {
-              height: 100%;
-              padding: 0;
-            }
-            button {
-              outline: none;
-              border: 2px solid #e2e2e2;
-              background: #e2e2e2;
-              height: 100%;
-              padding: 0;
-              width: 50px;
-              font-weight: bold;
-              color: #505050;
-              font-size: 20px;
-              &:active {
-                background: #e65540;
-                color: white;
-              }
-            }
-            input {
-              border: 2px solid #e2e2e2;
-              height: 50px;
-              padding: 0;
-              width: 50px;
-            }
-          }
+          
         }
       }
       tfoot {

@@ -135,12 +135,15 @@
                     <div class="col-4 border-class">
                         <h2>Subtotal:</h2>
                     </div>
-                    <div class="col-8 border-class subtotal"><p>39.00</p></div>
+                    <div class="col-8 border-class subtotal">
+                        <p>39.00</p>
+                    </div>
                     <div class="col-4">
                         <h2>Shipping:</h2>
                     </div>
                     <div class="col-8 pl-3">
-                       <p> There are no shipping methods available. Please double check your address, or contact us if you
+                        <p> There are no shipping methods available. Please double check your address, or contact us if
+                            you
                             need any help.</p>
                     </div>
                     <div class="col-4"></div>
@@ -168,7 +171,7 @@
                     </div>
                     <div class="col-4"></div>
                     <div class="col-8">
-                        <input type="text" class="search-input " placeholder="Postcode / Zip" >
+                        <input type="text" class="search-input " placeholder="Postcode / Zip">
                     </div>
                     <div class="col-4 border-class"></div>
                     <div class="col-8 border-class">
@@ -178,7 +181,9 @@
                     <div class="col-4">
                         <h2>Total:</h2>
                     </div>
-                    <div class="col-8"><p>39.00</p></div>
+                    <div class="col-8">
+                        <p>39.00</p>
+                    </div>
                     <div class="col-2"></div>
                     <div class="col-12 col-md-10">
                         <a href="" class="page-button m-auto ">PRODUCED TO CHECKOUT</a>
@@ -319,10 +324,34 @@
                     // 
                     // 
 
-                    $(`#minus${f}`).click(function () {
-                        let count = parseInt($(`#input${f}`).val());
-                        if (count > 1) {
-                            count--;
+
+
+                }
+            }
+
+            for (let f in product) {
+                if (localStorage[f] != undefined && localStorage[f] != null) {
+                    let element = JSON.parse(localStorage[f])
+                        $(`#minus${f}`).click(function () {
+                            let count = parseInt($(`#input${f}`).val());
+                            if (count > 1) {
+                                count--;
+                                let total = count * parseFloat(element['new price']);
+                                $(`#input${f}`).val(count);
+                                $(`#result${f}`).text(total);
+                                let elements = $('.result');
+                                let result = 0;
+                                for (let f of elements) {
+                                    result += parseFloat($(f).html());
+                                    console.log(result);
+                                }
+                                $('.subtotal').text(result);
+                            }
+                        })
+                        $(`#pilus${f}`).click(function () {
+                            let count = parseInt($(`#input${f}`).val());
+                            count++;
+                            console.log(parseFloat(element['new price']));
                             let total = count * parseFloat(element['new price']);
                             $(`#input${f}`).val(count);
                             $(`#result${f}`).text(total);
@@ -333,28 +362,10 @@
                                 console.log(result);
                             }
                             $('.subtotal').text(result);
-                        }
-                    })
-                    $(`#pilus${f}`).click(function () {
-                        let count = parseInt($(`#input${f}`).val());
-                        count++;
-                        console.log(parseFloat(element['new price']));
-                        let total = count * parseFloat(element['new price']);
-                        $(`#input${f}`).val(count);
-                        $(`#result${f}`).text( total);
-                        let elements = $('.result');
-                        let result = 0;
-                        for (let f of elements) {
-                            result += parseFloat($(f).html());
-                            console.log(result);
-                        }
-                        $('.subtotal').text(result);
-                    })
-
+                        })
+                    
                 }
             }
-
-
         })
 
     </script>

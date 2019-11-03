@@ -24,5 +24,7 @@ let blogs = [
                 vel arcu. Aliquam semper ullamcorper laoreet. Sed arcu lectus, fermentum 
                 imperdiet purus eu, ornare ornare libero.`,
         tags:['Streettstyle','Crafts'],
-    }
+        date:'28 Dec,2019',
+        img:'/blogPageImg/blog-02.jpg'
+    },
 ]

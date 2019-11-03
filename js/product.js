@@ -289,7 +289,7 @@ let showProducts = function (element,appendOn) {
                             <div class="cover">
                                 <a href="" class="banner-like-ikon animated zoomIn"><i
                                         class="mdi mdi-heart-outline"></i></a>
-                                <a href="" class="page-button animated fadeInUp">ADD TO CART</a>
+                                <a href="" class="page-button add-to-cart animated fadeInUp">ADD TO CART</a>
                             </div>
                         </div>
         `);

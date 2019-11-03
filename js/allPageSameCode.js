@@ -126,12 +126,11 @@ $(document).ready(function () {
 
 
 
-    let pageButton = $('.page-banner .page-button');
+    let pageButton = $('.add-to-cart');
     
     for (let f in pageButton) {
-        console.log(f)
+        
         $(pageButton[f]).click((e) => {
-            console.log("clicked")
             e.preventDefault();
             let query;
             if (f < 4) {
