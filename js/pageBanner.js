@@ -67,30 +67,41 @@ let banners = {
             }
         },
         img1: {
-            url: '/heading images/master-slide-02.jpg',
-            p: 'New Collection 2018',
-            h3: "Leather Bags",
-            animation: '',
-            animation: '',
-        },
-        img2: {
-            url: '/heading images/master-slide-06.jpg',
-            p: 'New Collection 2018',
-            h3: "Leather Bags",
-            animation: '',
-            animation: '',
-        },
-        img3: {
-            url: '/heading images/master-slide-07.jpg',
+            url: 'heading images/master-slide-02.jpg',
             p: {
-                name: 'New Collection 2018',
-                animation: '',
+                name: 'Women Collection 2018',
+                animation: 'rotateInDownRight',
             },
             h3: {
-                name: "Leather Bags",
+                name: "New Arrivals",
 
-                animation: '',
+                animation: 'lightSpeedIn ',
             }
+        },
+        img2: {
+            url: 'heading images/master-slide-06.jpg',
+            p: {
+                name: 'Women Collection 2018',
+                animation: 'rotateInDownRight',
+            },
+            h3: {
+                name: "New Arrivals",
+
+                animation: 'lightSpeedIn ',
+            }
+        },
+        img3: {
+            url: 'heading images/master-slide-07.jpg',
+            p: {
+                name: 'Women Collection 2018',
+                animation: 'rotateInDownRight',
+            },
+            h3: {
+                name: "New Arrivals",
+
+                animation: 'lightSpeedIn ',
+            }
+            
         },
     },
     'homePage3': {
@@ -240,14 +251,14 @@ let banners = {
                 ParagFontSize: '18px',
             },
             bigScreen: {
-                height: '500px',
+                height: '200px',
                 BgSize: '100% 100%',
                 h3FontSize: '35px',
                 ParagFontSize: '14px',
             }
         },
         img1: {
-            url: 'heading images/heading-pages-06(1).jpg',
+            url: 'heading images/heading-pages-06 (1).jpg',
             h3: {
                 name:"CONTACT",
             }

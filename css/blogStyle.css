@@ -48,6 +48,7 @@ li {
 .added-products-list {
   display: block;
   position: relative;
+  overflow-y: scroll;
 }
 
 .product-tags .product-link {

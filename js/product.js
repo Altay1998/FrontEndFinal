@@ -274,7 +274,7 @@ let product = [
 
 
 ]
-let showProducts = function (element,appendOn) {
+let showProducts = function (element,f,appendOn) {
     let tag = element['tag'];
     let tagClassName;
     if (tag != null) {
@@ -286,9 +286,9 @@ let showProducts = function (element,appendOn) {
     <div class="about-products"></div>
     <div class="content-img ">
                         <div class="cover">
-                            <a href="" class="banner-like-ikon animated zoomIn"><i
+                            <a href="" class="banner-like-ikon liked-icon-${f} animated zoomIn"><i
                                     class="mdi mdi-heart-outline"></i></a>
-                            <a href="" class="page-button add-to-cart animated fadeInUp">ADD TO CART</a>
+                            <a href="" class="page-button add-to-cart add-to-cart-${f} animated fadeInUp">ADD TO CART</a>
                         </div>
                     </div>
     `);

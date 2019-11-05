@@ -39,4 +39,31 @@ li {
   background: url("/heading images/bg-banner-02.jpg") no-repeat center;
   background-size: 120% 100%;
 }
+
+.third-homePageHeader {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.page-main-navigation {
+  position: relative;
+}
+
+.added-products-list {
+  left: 20%;
+}
+
+.page-banner .cover {
+  height: 97% !important;
+}
+
+.owl-carousel .page-banner .cover {
+  width: 86% !important;
+  height: 95% !important;
+}
+
+.owl-carousel .page-banner .cover .page-button {
+  left: 15% !important;
+}
 /*# sourceMappingURL=homePageThird.css.map */

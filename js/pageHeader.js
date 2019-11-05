@@ -1,4 +1,4 @@
-$('header').append('<div class="container-fluid">\
+$('header').append('<div class="container-fluid header-main">\
 <div class="row p-3">\
     <div class="col-4 col-sm-3 col-md-2  text-left page-logo "><img src="homepageFirst/logo.png"\
             alt="photo"></div>\
@@ -6,32 +6,32 @@ $('header').append('<div class="container-fluid">\
     <nav class="main-menu col-8 d-none d-lg-block">\
         <ul class=" justify-content-center">\
             <li class="nav-item">\
-                <a class="nav-link " href="#">Home</a>\
+                <a class="nav-link " href="homepage1.html">Home</a>\
                 <div class="sub-menu">\
                     <ul>\
-                        <li><a href="">HomePage1</a></li>\
-                        <li><a href="">HomePage2</a></li>\
-                        <li><a href="">HomePage3</a></li>\
+                        <li><a href="homepage1.html">HomePage1</a></li>\
+                        <li><a href="homepage2.html">HomePage2</a></li>\
+                        <li><a href="homepage3.html">HomePage3</a></li>\
                     </ul>\
                 </div>\
             </li>\
             <li class="nav-item">\
-                <a class="nav-link" href="#">Shop</a>\
+                <a class="nav-link" href="shop.html">Shop</a>\
             </li>\
             <li class="nav-item">\
-                <a class="nav-link" href="#">Sale</a>\
+                <a class="nav-link" href="shop.html">Sale</a>\
             </li>\
             <li class="nav-item">\
-                <a class="nav-link " href="#">Feature</a>\
+                <a class="nav-link " href="features.html">Feature</a>\
             </li>\
             <li class="nav-item">\
-                <a class="nav-link" href="#">Blog</a>\
+                <a class="nav-link" href="blog.html">Blog</a>\
             </li>\
             <li class="nav-item">\
-                <a class="nav-link" href="#">About</a>\
+                <a class="nav-link" href="about.html">About</a>\
             </li>\
             <li class="nav-item">\
-                <a class="nav-link" href="#">Contact</a>\
+                <a class="nav-link" href="contact.html">Contact</a>\
             </li>\
         </ul>\
     </nav>\
@@ -55,7 +55,7 @@ $('header').append('<div class="container-fluid">\
     </div>\
 </div>\
 </div>\
-<div class="dropdown-menu  d-lg-none flex-wrap">\
+<div class="dropdown-menu  d-lg-none position-static">\
 <div class="head-p pt-2 ml-2 border-top">\
     <p>Free shipping for standard order over $100</p>\
 </div>\
@@ -83,34 +83,34 @@ $('header').append('<div class="container-fluid">\
 <nav class="menu-navigation">\
     <ul class="nav justify-content-center">\
         <li class="nav-item menu-navigation-item">\
-            <a class="nav-link " href="#">Home</a>\
+            <a class="nav-link " href="homePage1.html">Home</a>\
             <i class="mdi mdi-chevron-right dropdown-button"></i>\
             <div class="sub-menu">\
                 <ul>\
-                    <li><a href="">HomePage1</a></li>\
-                    <li><a href="">HomePage2</a></li>\
-                    <li><a href="">HomePage3</a></li>\
+                    <li><a href="homePage1.html">HomePage1</a></li>\
+                    <li><a href="homePage2.html">HomePage2</a></li>\
+                    <li><a href="homePage3.html">HomePage3</a></li>\
                 </ul>\
             </div>\
         </li>\
         \
         <li class="nav-item">\
-            <a class="nav-link" href="#">Shop</a>\
+            <a class="nav-link" href="shop.html">Shop</a>\
         </li>\
         <li class="nav-item">\
-            <a class="nav-link" href="#">Sale</a>\
+            <a class="nav-link" href="shop.html">Sale</a>\
         </li>\
         <li class="nav-item">\
-            <a class="nav-link " href="#">Feature</a>\
+            <a class="nav-link " href="features.html">Feature</a>\
         </li>\
         <li class="nav-item">\
-            <a class="nav-link" href="#">Blog</a>\
+            <a class="nav-link" href="blog.html">Blog</a>\
         </li>\
         <li class="nav-item">\
-            <a class="nav-link" href="#">About</a>\
+            <a class="nav-link" href="about.html">About</a>\
         </li>\
         <li class="nav-item">\
-            <a class="nav-link" href="#">Contact</a>\
+            <a class="nav-link" href="contact.html">Contact</a>\
         </li>\
     </ul>\
 </nav>\
