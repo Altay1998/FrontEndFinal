@@ -67,7 +67,7 @@ for (let f in product) {
 setInterval(() => {
     let count = 0;
     for (let f in product) {
-        if (isElementInLocalStorage(product, `card-${f}`)) {
+        if (isElementInLocalStorage(`card-${f}`)) {
             count++;
 
         }
@@ -89,7 +89,7 @@ function pageProductContentImgSize(width, height) {
 
 function AddSwalToElement(element, specificKeyName, IndexForLocalStorage, title, message,callback) {
     if (localStorage[`${specificKeyName}-${IndexForLocalStorage}`] == undefined || localStorage[`${specificKeyName}-${IndexForLocalStorage}`] == null) {
-        let query = element[IndexForLocalStorage];
+        let query = JSON.stringify(element[IndexForLocalStorage]);
         localStorage.setItem(`${specificKeyName}-${IndexForLocalStorage}`, query);
         swal({
             title: title,
@@ -122,7 +122,7 @@ function checkLikedElement(checkColor,unchecedColor) {
         }
     }
 }
-function isElementInLocalStorage(element, key) {
+function isElementInLocalStorage(key) {
     let isHere = false;
     if (localStorage[key] != undefined) {
         isHere = true

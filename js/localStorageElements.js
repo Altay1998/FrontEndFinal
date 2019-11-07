@@ -5,8 +5,8 @@ $('.user-bucket-items').click(function (e) {
     $('.added-products-list .products').html('');
     e.stopPropagation();
     for (let f in product) {
-        if (localStorage[f] != undefined && localStorage[f] != null) {
-            let element = JSON.parse(localStorage[f])
+        if (localStorage[`card-${f}`] != undefined && localStorage[`card-${f}`] != null) {
+            let element = JSON.parse(localStorage[`card-${f}`])
             $('.added-products-list .products').append(`<div class="row justify-content-between product-list${f}">
             <div class="col-4 product  product-${f}">
                 <img src="${element['img']}" alt="">

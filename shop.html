@@ -86,7 +86,7 @@
                             <div class="row">
                                 <div class="col-12 d-flex justify-content-between">
                                     <a href="" class="page-button">Filter</a>
-                                    <p>Range: $50 - $200</p>
+                                    <p class="rangeChange">Range: $50 - $200</p>
                                 </div>
                             </div>
                         </div>
@@ -206,7 +206,17 @@
             addFunctionalityPageBanner();
             checkLikedElement();
 //ui-slider-handle
+            let uiSlide1 = $('.ui-slider-handle')[0];
+            let uiSlide2 = $('.ui-slider-handle')[1];
+            $(".rangeChange").text(`Range: $${parseInt($(uiSlide1).css('left'))}- $${parseInt($(uiSlide2).css('left'))}`)   
+            $(uiSlide1).mousemove((function(){
+                $(".rangeChange").text(`Range: $${parseInt($(this).css('left'))}- $${parseInt($(uiSlide2).css('left'))}`)   
+                     }))
 
+                    
+            $(uiSlide2).mousemove((function(){
+                $(".rangeChange").text(`Range: $${parseInt($(uiSlide1).css('left'))}- $${parseInt($(this).css('left'))}`)   
+                     }))
         })
     </script>
 </body>

@@ -1,9 +1,9 @@
 $('tbody').html('');
 for (let f in product) {
-    if (localStorage[f] != undefined && localStorage[f] != null) {
-        let element = JSON.parse(localStorage[f])
+    if (localStorage[`card-${f}`] != undefined && localStorage[`card-${f}`] != null) {
+        let element = JSON.parse(localStorage.getItem(`card-${f}`));
 
-        $('tbody').append(`<tr class="tr${f}">
+        $('tbody').append(`<tr class="card-${f}">
                     <td >
                         <div class="p-4 d-flex justify-content-center  align-items-center">
                             <div class="item m-auto product" style="width: 70%;position: relative;">
